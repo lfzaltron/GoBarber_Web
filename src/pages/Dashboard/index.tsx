@@ -30,14 +30,10 @@ interface MonthAvailabilityItem {
 
 interface Appointment {
   id: string;
-  //  "provider_id": "dd75265d-81fe-4722-8b63-6d2174f0c807",
-  //  "user_id": "f689cc1c-e157-47ef-b54b-a766cd86d0f9",
   date: string;
   formattedHour: string;
   user: {
-    //    "id": "f689cc1c-e157-47ef-b54b-a766cd86d0f9",
     name: string;
-    //    "email": "lfzaltron@gmail.com",
     avatar_url: string;
   };
 }
