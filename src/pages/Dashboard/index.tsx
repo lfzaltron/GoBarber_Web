@@ -20,6 +20,7 @@ import {
 } from './styles';
 
 import logoImg from '../../assets/logo.svg';
+import profileImg from '../../assets/profile.jpg';
 import { useAuth } from '../../hooks/auth';
 import api from '../../services/api';
 
@@ -148,7 +149,7 @@ const Dashboard: React.FC = () => {
           <img src={logoImg} alt="GoBarber" />
 
           <Profile>
-            <img src={user.avatar_url} alt={user.name} />
+            <img src={user.avatar_url || profileImg} alt={user.name} />
             <div>
               <span>Bem-vindo,</span>
               <Link to="/profile">
@@ -177,7 +178,7 @@ const Dashboard: React.FC = () => {
               <strong>Agendamento a seguir</strong>
               <div>
                 <img
-                  src={nextAppointment.user.avatar_url}
+                  src={nextAppointment.user.avatar_url || profileImg}
                   alt={nextAppointment?.user.name}
                 />
 
@@ -206,7 +207,7 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={appointment.user.avatar_url || profileImg}
                     alt={appointment.user.name}
                   />
                   <strong>{appointment.user.name}</strong>
@@ -231,7 +232,7 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={appointment.user.avatar_url || profileImg}
                     alt={appointment.user.name}
                   />
                   <strong>{appointment.user.name}</strong>
